@@ -52,9 +52,6 @@ region = Rect2(320, 0, 64, 64)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_fos0i")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_03owx")
 }, {
 "duration": 1.0,
@@ -71,9 +68,6 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_lgr22")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_c6i3y")
 }, {
@@ -101,13 +95,13 @@ animations = [{
 size = Vector2(126, 126)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_57qmd"]
-size = Vector2(104, 629)
+size = Vector2(104, 122.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d0u6y"]
-size = Vector2(698, 90)
+size = Vector2(183, 35)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3gngh"]
-size = Vector2(273.25, 276)
+size = Vector2(107.625, 81)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5tuhn"]
 atlas = ExtResource("5_3dxm6")
@@ -153,9 +147,6 @@ region = Rect2(320, 0, 64, 64)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_3dxm6")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_5tuhn")
 }, {
 "duration": 1.0,
@@ -172,9 +163,6 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("7_trn2v")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_bg4s2")
 }, {
@@ -206,9 +194,10 @@ size = Vector2(128, 128)
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1641765328]
 script = ExtResource("1_uu6xs")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="Player" unique_id=2064628679]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=2064628679]
+scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
-animation = &"run"
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=558857452]
 shape = SubResource("RectangleShape2D_g4v7s")
@@ -220,24 +209,25 @@ position = Vector2(228, 131)
 texture = ExtResource("1_glv2v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall" unique_id=2083213064]
-position = Vector2(118, 616)
+position = Vector2(118, 362.75)
 shape = SubResource("RectangleShape2D_57qmd")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Wall" unique_id=1741837347]
-position = Vector2(672, 336)
+position = Vector2(414.5, 308.5)
 shape = SubResource("RectangleShape2D_d0u6y")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Wall" unique_id=1334049782]
-position = Vector2(598.375, 745)
+position = Vector2(506, 575)
 shape = SubResource("RectangleShape2D_3gngh")
 
 [node name="Enemy" type="CharacterBody2D" parent="." unique_id=1724800341]
 script = ExtResource("3_r0du0")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="Enemy" unique_id=793490896]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Enemy" unique_id=793490896]
 position = Vector2(-257, 338)
+scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_yf5fn")
-animation = &"run"
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy" unique_id=1100753516]
 position = Vector2(-257, 338)
