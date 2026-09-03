@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://cefoqex02aj6y" path="res://enemy.gd" id="3_r0du0"]
 [ext_resource type="Texture2D" uid="uid://ccyp3fq2x3x0w" path="res://Idle-Sheet_Orc.png" id="5_3dxm6"]
 [ext_resource type="Texture2D" uid="uid://l2246stodahj" path="res://Run-Sheet_Orc.png" id="7_trn2v"]
+[ext_resource type="Texture2D" uid="uid://ckil4utyq85g8" path="res://Tavern.png" id="8_trn2v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_03owx"]
 atlas = ExtResource("2_fos0i")
@@ -232,3 +233,6 @@ animation = &"idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy" unique_id=1100753516]
 position = Vector2(-257, 338)
 shape = SubResource("RectangleShape2D_fcnqv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1152722366]
+texture = ExtResource("8_trn2v")
