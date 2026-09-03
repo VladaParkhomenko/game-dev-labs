@@ -2,7 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://bcguv5foaagdo" path="res://icon.svg" id="1_glv2v"]
 [ext_resource type="Script" uid="uid://d0m5rldf4aup1" path="res://player.gd" id="1_uu6xs"]
+[ext_resource type="Texture2D" uid="uid://cff08gnj2lwuc" path="res://Idle-Sheet_Wizzard.png" id="2_fos0i"]
 [ext_resource type="Script" uid="uid://cefoqex02aj6y" path="res://enemy.gd" id="3_r0du0"]
+[ext_resource type="Texture2D" uid="uid://ccyp3fq2x3x0w" path="res://Idle-Sheet_Orc.png" id="5_3dxm6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(126, 126)
@@ -25,7 +27,8 @@ size = Vector2(128, 128)
 script = ExtResource("1_uu6xs")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1920253620]
-texture = ExtResource("1_glv2v")
+texture = ExtResource("2_fos0i")
+hframes = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=558857452]
 shape = SubResource("RectangleShape2D_g4v7s")
@@ -53,7 +56,8 @@ script = ExtResource("3_r0du0")
 
 [node name="Sprite2D" type="Sprite2D" parent="Enemy" unique_id=76323514]
 position = Vector2(-257, 338)
-texture = ExtResource("1_glv2v")
+texture = ExtResource("5_3dxm6")
+hframes = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy" unique_id=1100753516]
 position = Vector2(-257, 338)
