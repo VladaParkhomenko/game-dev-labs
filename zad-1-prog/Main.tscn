@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://ccyp3fq2x3x0w" path="res://Idle-Sheet_Orc.png" id="5_3dxm6"]
 [ext_resource type="Texture2D" uid="uid://l2246stodahj" path="res://Run-Sheet_Orc.png" id="7_trn2v"]
 [ext_resource type="Texture2D" uid="uid://ckil4utyq85g8" path="res://Tavern.png" id="8_trn2v"]
+[ext_resource type="Texture2D" uid="uid://8pruetx25aa6" path="res://Lamps.png" id="9_03owx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_03owx"]
 atlas = ExtResource("2_fos0i")
@@ -233,6 +234,12 @@ size = Vector2(15, 25)
 [sub_resource type="CircleShape2D" id="CircleShape2D_7numd"]
 radius = 8.062258
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ixrvb"]
+size = Vector2(45, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aov4f"]
+size = Vector2(12, 36.5)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t8od5"]
 size = Vector2(8.5, 19)
 
@@ -295,9 +302,6 @@ size = Vector2(415, 78)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mfxj0"]
 size = Vector2(175.25, 64)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_aov4f"]
-size = Vector2(78, 15)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vfslc"]
 size = Vector2(15.375, 48)
@@ -498,6 +502,14 @@ shape = SubResource("RectangleShape2D_wgxnn")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelWalls/Details" unique_id=516095359]
 position = Vector2(-5, 4)
 shape = SubResource("CircleShape2D_7numd")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="LevelWalls/Details" unique_id=2006616658]
+position = Vector2(205.5, -25)
+shape = SubResource("RectangleShape2D_ixrvb")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="LevelWalls/Details" unique_id=326368049]
+position = Vector2(394, -87.25)
+shape = SubResource("RectangleShape2D_aov4f")
 
 [node name="Tables" type="StaticBody2D" parent="LevelWalls" unique_id=583855117]
 
@@ -766,9 +778,21 @@ position = Vector2(265.375, -112)
 shape = SubResource("RectangleShape2D_mfxj0")
 
 [node name="CollisionShape2D15" type="CollisionShape2D" parent="LevelWalls/Walls inside" unique_id=1455537442]
-position = Vector2(218, -24.5)
+position = Vector2(506, -87)
 shape = SubResource("RectangleShape2D_aov4f")
 
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="LevelWalls/Walls inside" unique_id=861480277]
 position = Vector2(250, -56)
 shape = SubResource("RectangleShape2D_vfslc")
+
+[node name="Lamps" type="Sprite2D" parent="." unique_id=408839699]
+position = Vector2(986, -106)
+texture = ExtResource("9_03owx")
+
+[node name="Lamps2" type="Sprite2D" parent="." unique_id=387256503]
+position = Vector2(874, -106)
+texture = ExtResource("9_03owx")
+
+[node name="Lamps3" type="Sprite2D" parent="." unique_id=1355387169]
+position = Vector2(762, -106)
+texture = ExtResource("9_03owx")
