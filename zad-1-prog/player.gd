@@ -2,7 +2,7 @@ extends CharacterBody2D
 @export var speed: float = 200.0
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	#WASD
 	var direction := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 
