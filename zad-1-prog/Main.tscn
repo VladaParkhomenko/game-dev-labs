@@ -992,8 +992,14 @@ texture = ExtResource("8_03owx")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TavernMap/Enemy/Area2D" unique_id=2068331434]
 shape = SubResource("RectangleShape2D_qkkkt")
 
-[node name="RayCast2D" type="RayCast2D" parent="TavernMap/Enemy" unique_id=624664923]
+[node name="RayFront" type="RayCast2D" parent="TavernMap/Enemy" unique_id=624664923]
 target_position = Vector2(30, 50)
+
+[node name="RayLeft" type="RayCast2D" parent="TavernMap/Enemy" unique_id=731106636]
+target_position = Vector2(-25, -30)
+
+[node name="RayRight" type="RayCast2D" parent="TavernMap/Enemy" unique_id=30171400]
+target_position = Vector2(25, -30)
 
 [node name="Lamps3" type="Sprite2D" parent="TavernMap" unique_id=1355387169]
 position = Vector2(1049.6666, -1510.1666)
