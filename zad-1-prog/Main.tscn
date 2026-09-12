@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://cefoqex02aj6y" path="res://enemy.gd" id="3_r0du0"]
 [ext_resource type="Texture2D" uid="uid://ccyp3fq2x3x0w" path="res://Idle-Sheet_Orc.png" id="5_3dxm6"]
 [ext_resource type="Texture2D" uid="uid://l2246stodahj" path="res://Run-Sheet_Orc.png" id="7_trn2v"]
+[ext_resource type="Texture2D" uid="uid://bbur856pnvdyd" path="res://Gotcha.png" id="8_03owx"]
 [ext_resource type="Texture2D" uid="uid://ckil4utyq85g8" path="res://Tavern.png" id="8_trn2v"]
 [ext_resource type="Texture2D" uid="uid://8pruetx25aa6" path="res://Lamps.png" id="9_03owx"]
 
@@ -483,6 +484,8 @@ _data = {
 &"idle_anim": SubResource("Animation_5vvyt"),
 &"run_anim": SubResource("Animation_c6i3y")
 }
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qkkkt"]
 
 [node name="Node2D" type="Node2D" unique_id=1289963067]
 position = Vector2(-946, 2476)
@@ -978,6 +981,20 @@ shape = SubResource("RectangleShape2D_yf5fn")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="TavernMap/Enemy" unique_id=1158091362]
 libraries/ = SubResource("AnimationLibrary_c2ibq")
 
+[node name="GotchaBubble" type="Sprite2D" parent="TavernMap/Enemy" unique_id=267764091]
+visible = false
+position = Vector2(58.00001, 13.333334)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("8_03owx")
+
+[node name="Area2D" type="Area2D" parent="TavernMap/Enemy" unique_id=1593628621]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TavernMap/Enemy/Area2D" unique_id=2068331434]
+shape = SubResource("RectangleShape2D_qkkkt")
+
+[node name="RayCast2D" type="RayCast2D" parent="TavernMap/Enemy" unique_id=624664923]
+target_position = Vector2(30, 50)
+
 [node name="Lamps3" type="Sprite2D" parent="TavernMap" unique_id=1355387169]
 position = Vector2(1049.6666, -1510.1666)
 texture = ExtResource("9_03owx")
@@ -989,3 +1006,6 @@ texture = ExtResource("9_03owx")
 [node name="Lamps2" type="Sprite2D" parent="TavernMap" unique_id=387256503]
 position = Vector2(1161.6666, -1510.1666)
 texture = ExtResource("9_03owx")
+
+[connection signal="body_entered" from="TavernMap/Enemy/Area2D" to="TavernMap/Enemy" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="TavernMap/Enemy/Area2D" to="TavernMap/Enemy" method="_on_area_2d_body_exited"]
