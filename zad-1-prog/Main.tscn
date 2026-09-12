@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bbur856pnvdyd" path="res://Gotcha.png" id="8_03owx"]
 [ext_resource type="Texture2D" uid="uid://ckil4utyq85g8" path="res://Tavern.png" id="8_trn2v"]
 [ext_resource type="Texture2D" uid="uid://8pruetx25aa6" path="res://Lamps.png" id="9_03owx"]
+[ext_resource type="Texture2D" uid="uid://dnqtswpl3h3c6" path="res://Floor.png" id="10_wkp8b"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d0u6y"]
 radius = 5.0
@@ -33,7 +34,7 @@ radius = 6.0827627
 size = Vector2(5.25, 3.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1me0x"]
-size = Vector2(64, 12)
+size = Vector2(64, 19.166656)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5t7ve"]
 size = Vector2(5, 3.5)
@@ -619,7 +620,7 @@ position = Vector2(238.625, -66.25)
 shape = SubResource("RectangleShape2D_3nlwh")
 
 [node name="CollisionShape2D17" type="CollisionShape2D" parent="TavernMap/LevelWalls/Details" unique_id=1710401480]
-position = Vector2(210, -74)
+position = Vector2(210, -77.58333)
 shape = SubResource("RectangleShape2D_1me0x")
 
 [node name="CollisionShape2D18" type="CollisionShape2D" parent="TavernMap/LevelWalls/Details" unique_id=907625242]
@@ -1012,6 +1013,11 @@ texture = ExtResource("9_03owx")
 [node name="Lamps2" type="Sprite2D" parent="TavernMap" unique_id=387256503]
 position = Vector2(1161.6666, -1510.1666)
 texture = ExtResource("9_03owx")
+
+[node name="Floor" type="Sprite2D" parent="TavernMap" unique_id=1145136777]
+position = Vector2(1128.0001, -1291.3334)
+scale = Vector2(1.07, 1.07)
+texture = ExtResource("10_wkp8b")
 
 [connection signal="body_entered" from="TavernMap/Enemy/Area2D" to="TavernMap/Enemy" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="TavernMap/Enemy/Area2D" to="TavernMap/Enemy" method="_on_area_2d_body_exited"]
