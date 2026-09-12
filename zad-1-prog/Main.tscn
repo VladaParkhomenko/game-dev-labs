@@ -62,7 +62,7 @@ radius = 8.062258
 size = Vector2(74, 17.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aov4f"]
-size = Vector2(12, 33.5)
+size = Vector2(12, 31.583328)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t8od5"]
 size = Vector2(8.5, 14.5)
@@ -926,7 +926,7 @@ position = Vector2(264.375, -115.25)
 shape = SubResource("RectangleShape2D_mfxj0")
 
 [node name="CollisionShape2D15" type="CollisionShape2D" parent="TavernMap/LevelWalls/Walls inside" unique_id=1455537442]
-position = Vector2(506, -87)
+position = Vector2(506, -86.04166)
 shape = SubResource("RectangleShape2D_aov4f")
 
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="TavernMap/LevelWalls/Walls inside" unique_id=861480277]
